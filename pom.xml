@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gwtbootstrap</groupId>
     <artifactId>gwt-bootstrap</artifactId>
@@ -10,6 +11,15 @@
     <name>GWT-Bootstrap</name>
     <description>A GWT Library that provides the widgets of Bootstrap.</description>
     <url>http://gwtbootstrap.github.com/</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+            <comments>Same as Bootstrap</comments>
+        </license>
+    </licenses>
 
     <!-- project settings -->
     <properties>
@@ -29,6 +39,12 @@
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
             <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -75,163 +91,6 @@
         </dependency>
     </dependencies>
 
-
-    <profiles>
-        <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-        </profile>
-        <!-- for developers build. this profile add src/demo/java to build path. -->
-        <profile>
-            <id>dev</id>
-            <build>
-                <plugins>
-                    <!-- GWT Maven Plugin -->
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>gwt-maven-plugin</artifactId>
-                        <version>${gwt.version}</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>compile</goal>
-                                    <goal>test</goal>
-                                    <goal>resources</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <!-- Plugin configuration. There are many available 
-                            options, see gwt-maven-plugin documentation at codehaus.org -->
-                        <configuration>
-                            <module>com.github.gwtbootstrap.demo.BootstrapDemo.gwt.xml</module>
-                            <localWorkers>2</localWorkers>
-                            <runTarget>index.html</runTarget>
-                            <webappDirectory>${webappDirectory}</webappDirectory>
-                            <hostedWebapp>${webappDirectory}</hostedWebapp>
-                            <webXml>${baseDir}/${webappDirectory}/WEB-INF/web.xml</webXml>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>build-helper-maven-plugin</artifactId>
-                        <version>1.7</version>
-                        <executions>
-                            <execution>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>add-source</goal>
-                                </goals>
-                                <configuration>
-                                    <sources>
-                                        <source>src/demo/java</source>
-                                    </sources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- for showcase build -->
-        <profile>
-            <id>showcase</id>
-            <properties>
-                <webappDirectory>src/showcase/webapp</webappDirectory>
-            </properties>
-            <build>
-                <plugins>
-                    <!-- GWT Maven Plugin -->
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>gwt-maven-plugin</artifactId>
-                        <version>2.4.0</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>compile</goal>
-                                    <goal>test</goal>
-                                    <goal>resources</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <!-- Plugin configuration. There are many available 
-                            options, see gwt-maven-plugin documentation at codehaus.org -->
-                        <configuration>
-                            <modules>
-                                <module>com.github.gwtbootstrap.showcase.Showcase</module>
-                            </modules>
-                            <localWorkers>2</localWorkers>
-                            <runTarget>index.html</runTarget>
-                            <webappDirectory>${webappDirectory}</webappDirectory>
-                            <hostedWebapp>${webappDirectory}</hostedWebapp>
-                            <webXml>${baseDir}/${webappDirectory}/WEB-INF/web.xml</webXml>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>build-helper-maven-plugin</artifactId>
-                        <version>1.7</version>
-                        <executions>
-                            <execution>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>add-source</goal>
-                                </goals>
-                                <configuration>
-                                    <sources>
-                                        <source>src/showcase/java</source>
-                                    </sources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <version>2.1.1</version>
-                        <executions>
-                            <execution>
-                                <phase>compile</phase>
-                                <goals>
-                                    <goal>exploded</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <webappDirectory>${webappDirectory}</webappDirectory>
-                            <warSourceDirectory>${webappDirectory}</warSourceDirectory>
-                        </configuration>
-                    </plugin>
-
-                </plugins>
-            </build>
-            <dependencies>
-                <dependency>
-                    <groupId>javax.validation</groupId>
-                    <artifactId>validation-api</artifactId>
-                    <version>1.0.0.GA</version>
-                    <scope>compile</scope>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>javax.validation</groupId>
-                    <artifactId>validation-api</artifactId>
-                    <version>1.0.0.GA</version>
-                    <classifier>sources</classifier>
-                    <scope>compile</scope>
-                    <optional>true</optional>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
     <build>
         <!-- Generate compiled stuff in the folder used for developing mode -->
         <sourceDirectory>src/main/java</sourceDirectory>
@@ -309,11 +168,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- deploy maven site files to github. if you need deploy maven 
-                site files, Run `mvn site -Dgithub.global.userName={your username in github} 
-                -Dgithub.global.password={your password in github}` -->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
