@@ -62,6 +62,8 @@ import com.google.gwt.user.client.ui.Widget;
 
 import java.util.Date;
 
+
+
 /**
  * Base DatePicker component.
  *
@@ -81,6 +83,12 @@ public class DateBoxBase extends Widget implements HasValue<Date>,HasEnabled, Ha
     /** placeholderHelper */
     private final PlaceholderHelper placeholderHelper = GWT.create(PlaceholderHelper.class);
     private boolean autoclose = false;
+
+    /**
+     * Empty=allow all.
+     * Values: 0=sun,1=mon,2,3,4,5,6. E.g only allow thursdays and fridays="4,5"
+     */
+    private String allowedWeekdays = "";
 
     public DateBoxBase() {
         this.box = new TextBox();
@@ -217,7 +225,7 @@ public class DateBoxBase extends Widget implements HasValue<Date>,HasEnabled, Ha
     protected void configure(Widget w) {
         w.getElement().setAttribute("data-date-format", format);
         w.getElement().setAttribute("data-date-language", language);
-        configure(w.getElement(), autoclose);
+        configure(w.getElement(), autoclose, allowedWeekdays);
     }
 
     /**
@@ -270,9 +278,9 @@ public class DateBoxBase extends Widget implements HasValue<Date>,HasEnabled, Ha
      * @param e: Element that will be transformed in a datepicker.
      * @param autoclose  is autoclose?
      */
-    protected native void configure(Element e, boolean autoclose) /*-{
+    protected native void configure(Element e, boolean autoclose, String allowedWeekdays) /*-{
         var that = this;
-        $wnd.jQuery(e).datepicker({autoclose : autoclose})
+        $wnd.jQuery(e).datepicker({autoclose : autoclose, allowedWeekdays: allowedWeekdays})
         .on('change' , function() {
             that.@com.github.gwtbootstrap.datepicker.client.ui.base.DateBoxBase::onChange()();
         })
@@ -398,6 +406,14 @@ public class DateBoxBase extends Widget implements HasValue<Date>,HasEnabled, Ha
     @Override
     public void setAutoClose(boolean autoclose) {
         this.autoclose = autoclose;
+    }
+
+    public void setAllowedWeekdays(String allowedWeekdays) {
+        this.allowedWeekdays = allowedWeekdays;
+    }
+
+    public String getAllowedWeekdays() {
+        return allowedWeekdays;
     }
 
     /**

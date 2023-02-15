@@ -1,4 +1,4 @@
-This is no longer maintained. Use it at your own risk.
+FORKED by rn: to be used with MCP KR Administratio.
 
 ---
 

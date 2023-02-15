@@ -1,277 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <!-- POM file generated with GWT webAppCreator -->
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gwtbootstrap</groupId>
     <artifactId>gwt-bootstrap</artifactId>
-    <version>2.3.2.1-SNAPSHOT</version>
+    <version>2.3.2.1-a2i-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>GWT-Bootstrap</name>
     <description>A GWT Library that provides the widgets of Bootstrap.</description>
     <url>http://gwtbootstrap.github.com/</url>
 
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
-            <comments>Same as Bootstrap</comments>
-        </license>
-    </licenses>
-
-    <inceptionYear>2012</inceptionYear>
-    <!-- project infomation -->
-    <scm>
-        <url>git@github.com:gwtbootstrap/gwt-bootstrap.git</url>
-        <connection>scm:git:git@github.com:gwtbootstrap/gwt-bootstrap.git</connection>
-        <developerConnection>scm:git:git@github.com:gwtbootstrap/gwt-bootstrap.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
-    <issueManagement>
-        <system>github</system>
-        <url>https://github.com/gwtbootstrap/gwt-bootstrap/issues</url>
-    </issueManagement>
-    <organization>
-        <name>gwtbootstrap</name>
-        <url>https://github.com/gwtbootstrap</url>
-    </organization>
-    <mailingLists>
-        <mailingList>
-            <name>GWT-Bootstrap</name>
-            <archive>https://groups.google.com/d/forum/gwt-bootstrap</archive>
-            <subscribe>gwt-bootstrap+subscribe@googlegroups.com</subscribe>
-            <unsubscribe>gwt-bootstrap+unsubscribe@googlegroups.com</unsubscribe>
-            <post>https://groups.google.com/d/forum/gwt-bootstrap</post>
-        </mailingList>
-    </mailingLists>
-    <developers>
-        <developer>
-            <id>caarlos0</id>
-            <name>Carlos Alexandro Becker</name>
-            <url>https://github.com/caarlos0</url>
-            <roles>
-                <role>lead</role>
-                <role>architect</role>
-                <role>developer</role>
-            </roles>
-            <timezone>-3</timezone>
-        </developer>
-        <developer>
-            <id>dominikmayer</id>
-            <name>Dominik Mayer</name>
-            <url>https://github.com/dominikmayer</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>YusukeKokubo</id>
-            <name>Yusuke Kokubo</name>
-            <url>https://github.com/YusukeKokubo</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+9</timezone>
-        </developer>
-        <developer>
-            <id>xosler</id>
-            <name>Alexandre Schossler</name>
-            <url>https://github.com/xosler</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>soundTricker</id>
-            <name>Keisuke Oohashi</name>
-            <url>https://github.com/soundTricker</url>
-            <roles>
-                <role>deployer</role>
-                <role>developer</role>
-            </roles>
-            <timezone>+9</timezone>
-        </developer>
-    </developers>
-    <contributors>
-        <contributor>
-            <name>Raidok</name>
-            <url>https://github.com/Raidok</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>PerWiklander</name>
-            <url>https://github.com/PerWiklander</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>Cássio de Freitas e Silva</name>
-            <url>https://github.com/ksfreitas</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>-3</timezone>
-        </contributor>
-        <contributor>
-            <name>tjwebb</name>
-            <url>https://github.com/tjwebb</url>
-            <roles>
-                <role>developer</role>
-                <role>ci server</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>lowsky</name>
-            <url>https://github.com/lowsky</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>schollD</name>
-            <url>https://github.com/schollD</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </contributor>
-        <contributor>
-            <name>jkpl</name>
-            <url>https://github.com/jkpl</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>ivangsa</name>
-            <url>https://github.com/ivangsa</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>rexorient</name>
-            <url>https://github.com/rexorient</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>doctorj</name>
-            <url>https://github.com/doctorj</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>rwl</name>
-            <url>https://github.com/rwl</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>JulienNexonia</name>
-            <url>https://github.com/JulienNexonia</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>PerWiklander</name>
-            <url>https://github.com/PerWiklander</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>ToruInoue</name>
-            <url>https://github.com/ToruInoue</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>ksfreitas</name>
-            <url>https://github.com/ksfreitas</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>dbachelder</name>
-            <url>https://github.com/dbachelder</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>creex</name>
-            <url>https://github.com/creex</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>drafael</name>
-            <url>https://github.com/drafael</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>komasoftware</name>
-            <url>https://github.com/komasoftware</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>porcelli</name>
-            <url>https://github.com/porcelli</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>gonzohunter</name>
-            <url>https://github.com/gonzohunter</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>weeshin</name>
-            <url>https://github.com/weeshin</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-        <contributor>
-            <name>mathieuboniface</name>
-            <url>https://github.com/mathieuboniface</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </contributor>
-    </contributors>
-    <ciManagement>
-        <system>CloudBees Jenkins</system>
-    </ciManagement>
-
     <!-- project settings -->
     <properties>
         <!-- Convenience property to set the GWT version -->
-        <gwtVersion>2.4.0</gwtVersion>
+        <gwt.version>2.7.0</gwt.version>
         <webappDirectory>src/main/webapp</webappDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <github.sites.plugin.version>0.8</github.sites.plugin.version>
@@ -279,8 +22,14 @@
     <dependencies>
         <dependency>
             <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-            <version>${gwtVersion}</version>
+            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -326,36 +75,7 @@
         </dependency>
     </dependencies>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8.1</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <locale>en</locale>
-                    <linksource>true</linksource>
-                    <validateLinks>true</validateLinks>
-                    <links>
-                        <link>http://google-web-toolkit.googlecode.com/svn/javadoc/2.4</link>
-                    </links>
-                    <overview>${basedir}/src/main/java/com/github/gwtbootstrap/overview.html</overview>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.9</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
+
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>
@@ -365,24 +85,6 @@
                     <value>true</value>
                 </property>
             </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.4</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
         </profile>
         <!-- for developers build. this profile add src/demo/java to build path. -->
         <profile>
@@ -393,7 +95,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>gwt-maven-plugin</artifactId>
-                        <version>2.4.0</version>
+                        <version>${gwt.version}</version>
                         <executions>
                             <execution>
                                 <goals>
@@ -406,9 +108,7 @@
                         <!-- Plugin configuration. There are many available 
                             options, see gwt-maven-plugin documentation at codehaus.org -->
                         <configuration>
-                            <modules>
-                                <module>com.github.gwtbootstrap.demo.BootstrapDemo.gwt.xml</module>
-                            </modules>
+                            <module>com.github.gwtbootstrap.demo.BootstrapDemo.gwt.xml</module>
                             <localWorkers>2</localWorkers>
                             <runTarget>index.html</runTarget>
                             <webappDirectory>${webappDirectory}</webappDirectory>
@@ -513,23 +213,23 @@
 
                 </plugins>
             </build>
-      <dependencies>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>1.0.0.GA</version>
-            <scope>compile</scope>
-          <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>1.0.0.GA</version>
-            <classifier>sources</classifier>
-            <scope>compile</scope>
-          <optional>true</optional>
-        </dependency>
-      </dependencies>
+            <dependencies>
+                <dependency>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                    <version>1.0.0.GA</version>
+                    <scope>compile</scope>
+                    <optional>true</optional>
+                </dependency>
+                <dependency>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                    <version>1.0.0.GA</version>
+                    <classifier>sources</classifier>
+                    <scope>compile</scope>
+                    <optional>true</optional>
+                </dependency>
+            </dependencies>
         </profile>
     </profiles>
     <build>
@@ -553,28 +253,7 @@
             </resource>
         </resources>
         <plugins>
-            <!-- append license header to GWT-Bootstrap source and resource 
-                files. -->
-            <plugin>
-                <groupId>com.google.code.maven-license-plugin</groupId>
-                <artifactId>maven-license-plugin</artifactId>
-                <version>1.4.0</version>
-                <configuration>
-                    <header>src/license/header.txt</header>
-                    <includes>
-                        <include>src/**/*.java</include>
-                        <include>src/main/java/**/*.xml</include>
-                        <include>src/showcase/java/**/*.xml</include>
-                    </includes>
-                    <properties>
-                        <year>${project.inceptionYear}</year>
-                    </properties>
-                    <encoding>UTF-8</encoding>
-                    <headerDefinitions>
-                        <headerDefinition>src/license/header-definition.xml</headerDefinition>
-                    </headerDefinitions>
-                </configuration>
-            </plugin>
+
             <!-- GWT Maven Plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -615,30 +294,6 @@
                     <webappDirectory>${webappDirectory}</webappDirectory>
                 </configuration>
             </plugin>
-            <!-- for javadoc generate -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8.1</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <locale>en</locale>
-                    <linksource>true</linksource>
-                    <validateLinks>true</validateLinks>
-                    <links>
-                        <link>http://google-web-toolkit.googlecode.com/svn/javadoc/2.4</link>
-                    </links>
-                    <overview>${basedir}/src/main/java/com/github/gwtbootstrap/overview.html</overview>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
 
             <!-- for generate sorces.jar -->
             <plugin>
@@ -655,37 +310,10 @@
                 </executions>
             </plugin>
 
-            <!-- for generate maven sites -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.0</version>
-                <configuration>
-                    <locales>en</locales>
-                    <inputEncoding>UTF-8</inputEncoding>
-                    <outputEncoding>UTF-8</outputEncoding>
-                </configuration>
-            </plugin>
-
             <!-- deploy maven site files to github. if you need deploy maven 
                 site files, Run `mvn site -Dgithub.global.userName={your username in github} 
                 -Dgithub.global.password={your password in github}` -->
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>${github.sites.plugin.version}</version>
-                <configuration>
-                    <message>Building site for ${project.version}</message>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site</phase>
-                    </execution>
-                </executions>
-            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -728,7 +356,7 @@
                         <file>
                             <name>.settings/com.google.gwt.eclipse.core.prefs</name>
                             <content>
-                <![CDATA[
+                                <![CDATA[
 eclipse.preferences.version=1
 filesCopiedToWebInfLib=
                ]]>
@@ -737,7 +365,7 @@ filesCopiedToWebInfLib=
                         <file>
                             <name>.settings/com.google.gdt.eclipse.core.prefs</name>
                             <content>
-                <![CDATA[
+                                <![CDATA[
 eclipse.preferences.version=1
 jarsExcludedFromWebInfLib=
 warSrcDir=${webappDirectory}
@@ -751,11 +379,6 @@ warSrcDirIsOutput=false
         </plugins>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.3.2</version>
-                </plugin>
                 <!--This plugin's configuration is used to store Eclipse 
                     m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>
@@ -781,7 +404,7 @@ warSrcDirIsOutput=false
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -800,7 +423,7 @@ warSrcDirIsOutput=false
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
